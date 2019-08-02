@@ -1,0 +1,102 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Aug  2 17:04:37 2019
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 12
++-----------+----------+--------------------------------------------------------+------------+
+| Rule      | Severity | Description                                            | Violations |
++-----------+----------+--------------------------------------------------------+------------+
+| TIMING-17 | Warning  | Non-clocked sequential cell                            | 8          |
+| TIMING-18 | Warning  | Missing input or output delay                          | 1          |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin              | 1          |
+| XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 2          |
++-----------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RGB_LED_0/inst/counter_256_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on rst relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock sys_clk_pin is created on an inappropriate internal pin design_1_i/divider_0/inst/clk. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports -scoped_to_current_instance clk] (Source: d:/FPGA/LAB02_HW/p1/block4/block4.srcs/FPGA/LAB02_HW/p1/block1/block1.srcs/constrs_1/new/de_OOC.xdc (Line: 1))
+Previous: create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports -scoped_to_current_instance clk] (Source: d:/FPGA/LAB02_HW/p1/block4/block4.srcs/FPGA/LAB02_HW/p1/block3/block3.srcs/constrs_1/new/RGB_LED_OOC.xdc (Line: 1))
+Related violations: <none>
+
+XDCC-1#2 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports -scoped_to_current_instance clk] (Source: d:/FPGA/LAB02_HW/p1/block4/block4.srcs/FPGA/LAB02_HW/p1/block2/block2.srcs/constrs_1/new/clk_div.xdc (Line: 2))
+Previous: create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports -scoped_to_current_instance clk] (Source: d:/FPGA/LAB02_HW/p1/block4/block4.srcs/FPGA/LAB02_HW/p1/block1/block1.srcs/constrs_1/new/de_OOC.xdc (Line: 1))
+Related violations: <none>
+
+
