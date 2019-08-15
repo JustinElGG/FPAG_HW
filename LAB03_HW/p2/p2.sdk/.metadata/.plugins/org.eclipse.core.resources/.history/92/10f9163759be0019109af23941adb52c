@@ -1,0 +1,32 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+
+#define SW_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+
+#define LED_DELAY     10000000
+
+XGpio SW_Gpio;
+
+int main() {
+	int SW_Status;
+	u32 sw_data;
+
+	/* Initialize the GPIO driver */
+	SW_Status = XGpio_Initialize(&SW_Gpio, SW_DEVICE_ID);
+	if (SW_Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	/* Set the direction for all signals as inputs except the LED output */
+	XGpio_SetDataDirection(&SW_Gpio, 1, 0x0f);
+
+	while(1){
+		sw_data = XGpio_DiscreteRead(SW_Gpio, 1);
+		xil_printf("data%d%r%n", sw_data);
+
+
+
+	}
+
+}

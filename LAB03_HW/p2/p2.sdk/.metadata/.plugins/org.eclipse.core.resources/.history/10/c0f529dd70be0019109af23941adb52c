@@ -1,0 +1,28 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include <stdio.h>
+
+#define SW_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+
+#define LED_DELAY     30000000
+
+XGpio SW_Gpio;
+
+
+
+int main() {
+	int stack[20];
+	for(int i=0 ; i<19 ; i++){
+		xil_printf("Please enter number [%d] : ", i+1);
+		stack[i] = scanf("%d\n", &stack[i]);
+		xil_printf("number [%d] \n", stack[i]);
+
+
+
+
+	}
+
+
+
+}
