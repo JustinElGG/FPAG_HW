@@ -1,0 +1,52 @@
+13:26:36 **** Auto Build of configuration Debug for project arithemetic ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../arithemetic_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:12:10: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d", &choose);
+         ~^   ~~~~~~~
+         %hhd
+../src/main.c:20:12: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u32 * {aka long unsigned int *}' [-Wformat=]
+    scanf("%d", &A);
+           ~^   ~~
+           %ld
+../src/main.c:21:14: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf(" %d\r\n", A);
+             ~^
+             %ld
+../src/main.c:23:12: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u32 * {aka long unsigned int *}' [-Wformat=]
+    scanf("%d", &B);
+           ~^   ~~
+           %ld
+../src/main.c:24:14: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf(" %d\r\n", B);
+             ~^
+             %ld
+../src/main.c:26:12: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u32 * {aka long unsigned int *}' [-Wformat=]
+    scanf("%d", &operator);
+           ~^   ~~~~~~~~~
+           %ld
+../src/main.c:27:14: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf(" %d\r\n", operator);
+             ~^
+             %ld
+../src/main.c:29:10: warning: implicit declaration of function 'ari' [-Wimplicit-function-declaration]
+    ans = ari(XPAR_ARITHEMETIC_0_S00_AXI_BASEADDR, A, B, operator);
+          ^~~
+../src/main.c:31:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    printf("Answer is = %d\n\r", ans);
+                        ~^
+                        %ld
+../src/main.c:38:21: error: 'in_num' undeclared (first use in this function); did you mean 'isalnum'?
+    scanf(" %d\r\n", in_num[i]);
+                     ^~~~~~
+                     isalnum
+../src/main.c:38:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+
+13:26:40 Build Finished (took 3s.648ms)
+

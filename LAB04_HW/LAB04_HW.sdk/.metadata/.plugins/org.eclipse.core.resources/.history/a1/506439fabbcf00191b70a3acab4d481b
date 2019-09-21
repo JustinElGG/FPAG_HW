@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "arithemetic.h"
+
+
+int main(){
+	u32 A, B, operator, ans;
+	printf("Program Start.\n\r");
+	while(getchar() != EOF) {
+		printf("Input A:");
+		scanf("%d", &A);
+		printf(" %d\r\n", A);
+		printf("Input B:");
+		scanf("%d", &B);
+		printf(" %d\r\n", B);
+		scanf("%d", &operator);
+		printf(" %d\r\n", operator);
+
+		ans = ari(XPAR_PS7_DDR_0_S_AXI_BASEADDR, A, B, operator);
+
+		printf("Answer is = %d\n\r", ans);
+	}
+	printf("Program End.\n\r");
+    return 0;
+}
