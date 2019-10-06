@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module LED_rgb(
+module LED_rgb(             //set led state as a LUT, input current state and know which led should turn on.
     input [2:0] c_state,
     output reg [5:0] RGB_LED
     );

@@ -51,13 +51,13 @@ module state_FSM(
             c_state <= n_state;
             count   <= n_count;
             
-            if(sw == 2'b01) begin
+            if(sw == 2'b01) begin       //case select , to determind which operation u want.
                 if(button) begin
                     y_time = y_time+1;
                 end
                 show = y_time;
             end
-            else if(sw == 2'b10) begin
+            else if(sw == 2'b10) begin      //adding time, and show the recent second count.
                 if(button) begin
                     g_time = g_time+1;
                 end
@@ -69,7 +69,7 @@ module state_FSM(
                 end
                 show = r_time;
             end
-            else begin
+            else begin      //default case(00), show the traffic light,
                 show = {1'd0, c_state};
             end
             
@@ -78,8 +78,8 @@ module state_FSM(
     
     always@(*) begin
     if(sw == 2'b00) begin
-        case (c_state) 
-        3'b000:  begin
+        case (c_state)          //FSM
+        3'b000:  begin          //switching case if counter meets count
             if(count >= g_time - 1) begin
                 n_state = 3'b001;
                 n_count = 5'd0;

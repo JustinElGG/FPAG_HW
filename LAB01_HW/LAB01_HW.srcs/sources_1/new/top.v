@@ -1,25 +1,4 @@
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2019/07/26 15:14:44
-// Design Name: 
-// Module Name: top
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module top(
     input clk ,
     input rst ,
@@ -47,7 +26,7 @@ module top(
     assign led5_g = RGB_LED[1];
     assign led5_b = RGB_LED[0];
     assign led = show;
-        
+    //connect everything~~~
     state_FSM M1 (
         .clk_div(clk_div),
         .rst(rst),
