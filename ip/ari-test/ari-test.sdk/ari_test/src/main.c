@@ -13,7 +13,8 @@ int main(){
 	printf("\n\r");
 
 	if(choose == 0){
-		u32 A, B, operator, ans;
+		u32 A, B, operator;
+		s32 ans;
 		printf("Program Start.\n\r");
 		while(getchar() != EOF) {
 			printf("Input A:");

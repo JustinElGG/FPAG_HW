@@ -36,10 +36,10 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib D:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files D:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all d:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/FPGA/ari-test/ari-test.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

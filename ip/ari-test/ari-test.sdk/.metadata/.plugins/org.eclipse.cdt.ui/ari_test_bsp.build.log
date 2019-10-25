@@ -1,4 +1,4 @@
-16:39:42 **** Auto Build of project ari_test_bsp ****
+21:54:40 **** Auto Build of project ari_test_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/arithemetic_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/arithemetic_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -110,5 +110,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-16:40:00 Build Finished (took 18s.603ms)
+21:54:58 Build Finished (took 17s.706ms)
 
